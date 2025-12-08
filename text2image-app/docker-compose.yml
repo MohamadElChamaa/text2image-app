@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    container_name: text2image_app
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+      - HF_MODEL=${HF_MODEL}
+      - GRADIO_SERVER_PORT=7860
+    volumes:
+      - ./app/static:/app/app/static
+      - ./outputs:/app/outputs
+    ports:
+      - "7860:7860"
+    # Uncomment to use GPU (host must have NVIDIA runtime + compatible base image and torch)
+    # runtime: nvidia

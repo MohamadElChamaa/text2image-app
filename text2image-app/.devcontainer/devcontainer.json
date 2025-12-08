@@ -1,0 +1,9 @@
+{
+  "name": "text2image devcontainer",
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.10",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {}
+  },
+  "workspaceFolder": "/workspace",
+  "postCreateCommand": "pip install -r requirements.txt"
+}

@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.dll
+*.pt
+*.bin
+*.pkl
+*.sav
+*.h5
+*.onnx
